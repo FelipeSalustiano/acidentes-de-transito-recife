@@ -31,3 +31,6 @@ Com os dados tratados e enriquecidos, o projeto avançou para a construção de 
 
 ## Conclusão Final
 Este projeto não apenas gerou um panorama detalhado sobre os acidentes na cidade do Recife, mas também entregou um produto de dados funcional. O modelo preditivo desenvolvido tem potencial para gerar impacto real na eficiência operacional dos serviços de emergência e, em última instância, contribuir para a mitigação das consequências dos acidentes de trânsito na cidade.
+
+**link base de dados:** [Dados Transito Recife](http://dados.recife.pe.gov.br/tr/dataset/acidentes-de-transito-com-e-sem-vitimas)
+
