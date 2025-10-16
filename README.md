@@ -23,38 +23,11 @@ Nesta fase, os dados dos três anos foram consolidados, limpos e tratados para g
 - Qual o impacto de eventos externos, como a pandemia de COVID-19?
 
 ### 2. Modelagem Preditiva
-Com os dados tratados e enriquecidos, o projeto avançou para a construção de um modelo de Machine Learning com o objetivo de **prever o número de vítimas** em um acidente com base em suas características (ex: localização, tipo de ocorrência, veículos envolvidos, etc.).
+Com os dados tratados e enriquecidos, o projeto avançou para a construção de um modelo com o objetivo de **prever se em um acidente, haverá ou não vitimas**, com base em suas características (ex: localização, tipo de ocorrência, veículos envolvidos, etc.).
 
--   **Algoritmos Testados:** Foram avaliados diferentes modelos de regressão, incluindo `Ridge Regression`, `Random Forest` e `XGBoost`.
--   **Seleção e Otimização:** O `XGBoost` foi selecionado como o mais performático e passou por um processo de otimização de hiperparâmetros com `GridSearchCV` para maximizar sua capacidade preditiva.
+-   **Algoritmos Testados:** Foram avaliados diferentes modelos de classificação, incluindo `CatBoost` e `LightGBM`.
+-   **Seleção e Otimização:** O `CatBoost` foi selecionado como o mais performático, com um **recall de 94%** para valores previstos como 1 (acidente com vítima), errando apenas 49 de 810 valores.
 
-## Principais Conclusões e Insights
-A análise exploratória revelou padrões importantes:
-* **Localização:** O bairro de **Boa Viagem** concentra o volume mais significativo de acidentes.
-* **Tempo:** Os dias úteis, especialmente no **período da tarde**, representam os momentos de maior risco.
-* **Veículos:** **Automóveis e motocicletas** são, de longe, os veículos com maior envolvimento nos acidentes registrados.
-* **Impacto da Pandemia:** Foi observada uma queda notável no número de acidentes a partir de março de 2020, coincidindo com o início das medidas de isolamento social.
-
-Na frente de modelagem:
-* O modelo **XGBoost Otimizado** alcançou um **coeficiente de determinação (R²) de 51%**.
-* Embora a métrica indique que o modelo explica cerca de metade da variabilidade no número de vítimas, ele funciona como um eficaz **sistema de triagem e priorização**. Ele é capaz de atribuir um índice de gravidade a um acidente em tempo real, permitindo que equipes de emergência (SAMU, CTTU) otimizem o despacho de recursos para os eventos de maior risco potencial.
-
-## Tecnologias Utilizadas
-* **Linguagem:** Python 3
-* **Bibliotecas de Análise:** Pandas, NumPy
-* **Bibliotecas de Visualização:** Matplotlib, Seaborn
-* **Bibliotecas de Machine Learning:** Scikit-learn, XGBoost
-
-## Como Utilizar
-1.  Clone o repositório:
-    ```bash
-    git clone [https://github.com/seu-usuario/nome-do-repositorio.git](https://github.com/seu-usuario/nome-do-repositorio.git)
-    ```
-2.  Instale as dependências necessárias:
-    ```bash
-    pip install pandas numpy matplotlib seaborn scikit-learn xgboost
-    ```
-3.  Abra e execute o notebook `Acidentes_de_Trânsito_Recife_2020_2022.ipynb` em um ambiente Jupyter.
 
 ## Conclusão Final
 Este projeto não apenas gerou um panorama detalhado sobre os acidentes na cidade do Recife, mas também entregou um produto de dados funcional. O modelo preditivo desenvolvido tem potencial para gerar impacto real na eficiência operacional dos serviços de emergência e, em última instância, contribuir para a mitigação das consequências dos acidentes de trânsito na cidade.
